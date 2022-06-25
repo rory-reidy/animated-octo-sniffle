@@ -18,6 +18,7 @@ private:
       for (int j = 0; j < y; j++) {
         k[j] = Number(true);
         std::cout<<k[j].getVal()<<" == "<<board[i][j].getVal()<<std::endl;
+        system("clear");
       }
       board[i] = k;
     }
@@ -35,29 +36,14 @@ public:
     initBoard(x,x);
   }
   void printBoard() {
-    system("clear");
+    //system("clear");
     int maxlength = 0;
     for (int i = 0; i < rows; i++) {
       for (int j = 0; j < cols; j++) {
-        std::cout<<board[i][j].getVal()<<std::endl;
+        std::cout<<board[i][j].getVal();
       }
+        std::cout<<std::endl;
     }
-    /*for (int i = 0; i < rows; i++) {
-      for (int j = 0; j < cols; j++) {
-        if (int(log10(board[i][j].getVal())) > maxlength) {
-          maxlength = int(log10(board[i][j].getVal()));
-        }
-      }
-    }
-    for (int i = 0; i < rows; i++) {
-      std::cout<<"|";
-      for (int j = 0; j < cols; j++){
-        std::string s = std::to_string(board[i][j].getVal());
-        s.insert(s.begin(), maxlength - s.size(), ' ');
-        std::cout<<s<<"|";
-      }
-      std::cout<<std::endl;
-    }*/
   }
   void move(int dir) {
     // 0 == up
