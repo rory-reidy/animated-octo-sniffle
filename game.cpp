@@ -178,7 +178,7 @@ public:
                 }
             }
             //find matches, merge
-            for (int j = column.size()-1; j > 0; j++) {
+            for (int j = column.size()-1; j > 0; j--) {
                 if (TilesMatch(*column.at(j), *column.at(j-1))) {
                     *column.at(j-1) = MergeTiles(*column.at(j-1), *column.at(j));
                     column.erase(column.begin()+j);
